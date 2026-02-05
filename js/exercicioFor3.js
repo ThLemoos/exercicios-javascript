@@ -1,12 +1,20 @@
 let n = Number(prompt('Digite um número: '));
 
-function calculo() {
+function tabuada() {
+
     const valorRecebido = [];
-    
+
     for (let i = 0; i <= 10; i++) {
-        valorRecebido = [n];
-        `${valorRecebido} * ${i} = ${valorRecebido * i}`;
+
+        const calculo = `${n * i}`;
+        valorRecebido.push(`${n} x ${i} = ${calculo}`);
     }
+    
+    return valorRecebido;
 }
 
-calculo();
+const resultado = tabuada();
+
+for (let i = 0; i < resultado.length; i++) {
+        alert(resultado[i]);
+    }
